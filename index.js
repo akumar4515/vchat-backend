@@ -14,7 +14,7 @@ app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:3000', // Restrict to frontend origin
+    origin: '*', // Restrict to frontend origin
     methods: ['GET', 'POST'],
   },
 });
