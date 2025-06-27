@@ -21,7 +21,7 @@ const io = new Server(server, {
 
 const JWT_SECRET = process.env.BACKEND_JWT_SECRET;
 
-app.use(cors({ origin: 'http://localhost:3000' })); // Restrict CORS for Express
+app.use(cors({ origin: '*' })); // Restrict CORS for Express
 app.use(express.json());
 
 const Authenticate = (req, res, next) => {
